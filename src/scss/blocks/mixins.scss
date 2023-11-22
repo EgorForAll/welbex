@@ -2,3 +2,10 @@
   display: flex;
   margin: 0 150px;
 }
+
+@mixin gradient-text() {
+  background: $gradient-text;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

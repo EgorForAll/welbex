@@ -1,19 +1,56 @@
 .header {
+  position: relative;
   width: 100%;
+  padding-top: 45px;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 57%;
+    width: 80px;
+    height: 70px;
+    content: "";
+    background-image: url("../../assets/images/purple-ball.svg");
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-130px, -160px);
+    width: 260px;
+    height: 260px;
+    border-radius: 260px;
+    opacity: 0.3;
+    background: #833ab4;
+    content: "";
+    filter: blur(500px);
+    z-index: -1;
+  }
 }
 
 .header__container {
   @include container();
   min-height: 70px;
-  margin-top: 60px;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
+}
+
+.header__left {
+  position: relative;
+  display: flex;
+  align-items: start;
+}
+
+.header__right {
+  display: flex;
+  align-items: start;
 }
 
 .header__logo-title {
   font-family: $montserrat;
   font-weight: 300;
-  color: $base-color;
+  color: $light-text;
   font-size: 10px;
   max-width: 140px;
   text-align: justify;
@@ -25,4 +62,31 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+
+.header__links {
+  font-family: $inter;
+  font-size: 16px;
+  color: $light-text;
+  font-weight: 500;
+  margin-right: 30px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+.header__nav {
+  display: flex;
+  margin-left: 50px;
+}
+
+.header__phone {
+  margin-right: 47px;
 }

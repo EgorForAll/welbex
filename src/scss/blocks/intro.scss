@@ -1,0 +1,150 @@
+.intro {
+  width: 100%;
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-155px, -155px);
+    content: "";
+    width: 310px;
+    height: 310px;
+    display: flex;
+    flex-shrink: 0;
+    border-radius: 310px;
+    opacity: 0.5;
+    background: #961a1a;
+    filter: blur(196px);
+  }
+}
+
+.intro__container {
+  @include container();
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 70px;
+}
+
+.intro__title {
+  position: relative;
+  font-family: $inter;
+  font-size: 48px;
+  font-weight: 400;
+  color: $light-text;
+
+  span {
+    @include gradient-text();
+    font-weight: 900;
+  }
+
+  &::before {
+    position: absolute;
+    top: -70%;
+    right: -25%;
+    content: "";
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    box-shadow: 3px 6px 27px rgba(223, 125, 125, 0.25);
+    background-image: url("../../assets/images/red-ball.svg");
+    background-repeat: no-repeat;
+    background-position: -14px -11px;
+  }
+}
+
+.intro__desc {
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro__subtitle {
+  font-family: $montserrat;
+  color: $light-text;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 30px;
+  max-width: 275px;
+  line-height: 25px;
+}
+
+.consultation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: -150px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../../assets/images/red-ball-small.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.consultation__text {
+  color: $light-text;
+  text-align: right;
+  font-family: $inter;
+  font-size: 18px;
+  font-weight: 500;
+  span {
+    @include gradient-text();
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.gifts__list {
+  margin-top: 70px;
+  row-gap: 30px;
+  column-gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: $light-text;
+}
+
+.gifts__item {
+  justify-self: flex-end;
+}
+
+.gifts__item-title {
+  font-size: 18px;
+  font-family: $inter;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: right;
+}
+
+.gifts__item-desc {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: $montserrat;
+  font-weight: 400;
+  text-align: right;
+}
+
+.consultation__link {
+  width: 260px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $light-text;
+  background-color: #4077f3;
+  margin-left: auto;
+  margin-top: 80px;
+  font-family: $inter;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

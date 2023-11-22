@@ -1,0 +1,11 @@
+.social__links {
+  @extend .header__links;
+}
+
+.header .social__links {
+  margin-right: 30px;
+}
+
+.footer .social__links {
+  margin-right: 10px;
+}
