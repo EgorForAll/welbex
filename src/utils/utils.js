@@ -45,3 +45,10 @@ export const menuBlock = {
     "Вопрос / Ответ",
   ],
 };
+
+export const giftMobile = [
+  "Skype аудит",
+  "Skype аудит",
+  "30 виджетов",
+  "Месяц аmoCRM",
+];

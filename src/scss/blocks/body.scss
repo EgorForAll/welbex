@@ -15,3 +15,8 @@ body {
 ul {
   list-style-type: none;
 }
+
+#root {
+  display: flex;
+  flex-direction: column;
+}

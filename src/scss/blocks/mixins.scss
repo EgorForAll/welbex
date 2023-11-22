@@ -1,6 +1,9 @@
 @mixin container() {
   display: flex;
   margin: 0 150px;
+  @media (max-width: $desktop-width) {
+    margin: 0 20px;
+  }
 }
 
 @mixin gradient-text() {

@@ -15,6 +15,30 @@
     opacity: 0.5;
     background: #961a1a;
     filter: blur(196px);
+    @media (max-width: $desktop-width) {
+      width: 211px;
+      height: 210px;
+      bottom: 0;
+      transform: translate(-105px, -55px);
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(130px, -130px);
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 260px;
+      opacity: 0.5;
+      background: #833ab4;
+      content: "";
+
+      filter: blur(196px);
+    }
   }
 }
 
@@ -23,6 +47,11 @@
   justify-content: space-between;
   margin-top: 100px;
   margin-bottom: 70px;
+
+  @media (max-width: $desktop-width) {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
 }
 
 .intro__title {
@@ -31,6 +60,11 @@
   font-size: 48px;
   font-weight: 400;
   color: $light-text;
+
+  @media (max-width: $desktop-width) {
+    margin-top: 40px;
+    font-size: 36px;
+  }
 
   span {
     @include gradient-text();
@@ -49,6 +83,9 @@
     background-image: url("../../assets/images/red-ball.svg");
     background-repeat: no-repeat;
     background-position: -14px -11px;
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
   }
 }
 
@@ -56,6 +93,21 @@
   max-width: 370px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  @media (max-width: $desktop-width) {
+    &::before {
+      position: absolute;
+      right: -28px;
+      bottom: 0;
+      width: 60px;
+      height: 60px;
+      content: "";
+      background-image: url("../../assets/images/purple-ball-mobile.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: 30% 30%;
+    }
+  }
 }
 
 .intro__subtitle {
@@ -66,6 +118,11 @@
   margin-top: 30px;
   max-width: 275px;
   line-height: 25px;
+
+  @media (max-width: $desktop-width) {
+    font-size: 18px;
+    margin-top: 15px;
+  }
 }
 
 .consultation {
@@ -73,6 +130,10 @@
   display: flex;
   flex-direction: column;
   max-width: 300px;
+
+  @media (max-width: $desktop-width) {
+    margin-top: 45px;
+  }
 
   &::before {
     position: absolute;
@@ -84,6 +145,9 @@
     background-image: url("../../assets/images/red-ball-small.svg");
     background-repeat: no-repeat;
     background-size: 100%;
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
   }
 }
 
@@ -93,10 +157,18 @@
   font-family: $inter;
   font-size: 18px;
   font-weight: 500;
+
+  @media (max-width: $desktop-width) {
+    text-align: left;
+  }
+
   span {
     @include gradient-text();
     text-transform: uppercase;
     font-weight: 700;
+    @media (max-width: $desktop-width) {
+      text-transform: lowercase;
+    }
   }
 }
 
@@ -107,6 +179,27 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: $light-text;
+  @media (max-width: $desktop-width) {
+    position: relative;
+    margin-top: 20px;
+    row-gap: 15px;
+    column-gap: 0;
+    &::after {
+      position: absolute;
+      bottom: -80px;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      content: "";
+      background-image: url("../../assets/images/red-ball-mobile.svg");
+      background-size: 100px;
+      background-repeat: no-repeat;
+      background-position: 38% 65%;
+      box-shadow: 3px 6px 27px rgba(223, 125, 125, 0.25);
+      filter: blur(10px);
+    }
+  }
 }
 
 .gifts__item {
@@ -144,7 +237,32 @@
   text-decoration: none;
   transition: opacity 0.3s ease;
 
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+
   &:hover {
     opacity: 0.5;
+  }
+}
+
+.gift-mobile {
+  position: relative;
+  color: $light-text;
+  font-family: $montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    background: linear-gradient(90deg, #fcb045 36.99%, #fd1d1d 100%);
   }
 }

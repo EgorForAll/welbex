@@ -13,9 +13,12 @@ const Footer = () => {
         </div>
         <div className="footer__block contacts-block">
           <h3 className="footer__block-title contacts-title">Контакты</h3>
-          <ul className="footer__block-list">
+          <ul className="footer__block-list contacts-list">
             <li className="footer__block-item contact-item">
-              <a className="footer__link" href="tel:+75555555555">
+              <a
+                className="footer__link telephone-link"
+                href="tel:+75555555555"
+              >
                 +7 555 555-55-55
               </a>
             </li>
